@@ -1,0 +1,163 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title class="center">
+      Sensor Data Reading
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="bg">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-item color="dark" no-lines>
+    <p class="center">*Pull down to reset</p>
+  </ion-item>
+
+  <div padding>
+    <div class="center">
+      <ion-chip>
+        <ion-label>Select Location and Device ID</ion-label>
+      </ion-chip>
+    </div>
+    <ion-row>
+      <ion-col>
+        <ion-item class="rounded" no-lines>
+          <ion-label>Location:</ion-label>
+          <ion-select (ionChange)="setSensornumValue(sLocation)" [(ngModel)]="sLocation">
+            <ion-option [value]="sLocation" *ngFor="let sLocation of location">
+              {{sLocation.name}}
+            </ion-option>
+          </ion-select>
+        </ion-item>
+        <br>
+
+        <ion-item class="rounded" *ngIf="selectedSensornum" no-lines>
+          <ion-label>Device ID: </ion-label>
+
+          <ion-select (ionChange)="setChild(sSensornum)" [(ngModel)]="sSensornum">
+            <ion-option [value]="sSensornum" *ngFor="let sSensornum of selectedSensornum">{{sSensornum.name}}
+            </ion-option>
+          </ion-select>
+        </ion-item>
+
+        <!--<div *ngIf="location_id==6" class="list">
+        
+        <ion-card *ngFor="let item of items | paginate: { itemsPerPage: 10, currentPage: p }"><br>Date & Time :{{ item.dateTime }} <p></p> Temperature : {{item.temperature}}<p></p>
+           Humidity : {{item.humidity}}<p></p> Current : {{item.current}}<p></p> <br>Accelerometer reading:<br><p></p> X-Axis:{{item.X}}
+           <p></p>Y-Axis:{{item.Y}}<p></p>Z-Axis:{{item.Z}}<p></p><br>
+           
+        
+          </ion-card>
+      
+        <br><ion-card color="secondary">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            
+          
+            
+          </ion-card></div>
+          --><br>
+      </ion-col>
+    </ion-row>
+
+
+    <!-- <ion-chip>
+      <ion-label>List</ion-label>
+    </ion-chip> -->
+
+    <div *ngIf="location_id==null" class="list">
+
+      <div class="circle">
+        <p class="bold"> EMPTY</p>
+        <img src="../assets/imgs/empty.png">
+      </div>
+      <p class="center"> *Please select Location and Device ID</p>
+
+    </div>
+
+
+    <div *ngIf="location_id==1" class="list">
+
+      <!-- <ion-card color="danger" *ngFor="let item1 of items1 | paginate: { itemsPerPage: 10, currentPage: p }"><br>Date &
+        Time
+        :{{ item1.dateTime }} <p></p> Temperature : {{item1.temperature}}<p></p>
+        Humidity : {{item1.humidity}}<p></p> Current : {{item1.current}}<p></p> <br>Accelerometer reading:<br>
+        <p></p> X-Axis:{{item1.X}}
+        <p></p>Y-Axis:{{item1.Y}}<p></p>Z-Axis:{{item1.Z}}<p></p><br>
+
+
+      </ion-card> -->
+
+      <ion-card *ngFor="let item1 of items1 | paginate: { itemsPerPage: 10, currentPage: p }" class="rounded">
+
+        <div class="center" padding>
+          <ion-chip>
+            <ion-label>
+              {{ item1.dateTime }}
+            </ion-label>
+          </ion-chip>
+        </div>
+
+
+        <ion-row class="line" padding>
+          <ion-col>
+            <img src="../assets/imgs/humid.png" class="size">
+            <p class="center">{{item1.humidity}}</p>
+          </ion-col>
+          <ion-col>
+            <img src="../assets/imgs/temp.png" class="size">
+            <p class="center">{{item1.temperature}}°C</p>
+          </ion-col>
+          <ion-col>
+            <img src="../assets/imgs/current.png" class="size">
+            <p class="center">{{item1.current}}V</p>
+          </ion-col>
+        </ion-row>
+        <ion-row padding>
+          <ion-col>
+            <p> • X-Axis : {{item1.X}}</p>
+            <p> • Y-Axis : {{item1.Y}}</p>
+            <p> • Z-Axis : {{item1.Z}}</p>
+          </ion-col>
+
+        </ion-row>
+
+
+
+      </ion-card>
+
+      <br>
+
+    </div>
+
+    <!-- <div *ngIf="location_id==6" class="list">
+
+      <ion-card color="danger" *ngFor="let item1 of items2 | paginate: { itemsPerPage: 10, currentPage: p }"><br>Date &
+        Time
+        :{{ item1.dateTime }} <p></p> Temperature : {{item1.temperature}}<p></p>
+        Humidity : {{item1.humidity}}<p></p> Current : {{item1.current}}<p></p> <br>Accelerometer reading:<br>
+        <p></p> X-Axis:{{item1.X}}
+        <p></p>Y-Axis:{{item1.Y}}<p></p>Z-Axis:{{item1.Z}}<p></p><br>
+
+
+      </ion-card>
+
+      <br>
+
+    </div> -->
+  </div>
+
+  <!--<button ion-button round color="light" (click)="logout()">Logout</button>
+  <br><br>-->
+
+  <br>
+
+</ion-content>
+<div>
+  <ion-card color="light" class="float">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </ion-card>
+</div>

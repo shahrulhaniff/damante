@@ -1,0 +1,105 @@
+<!--<ion-header >
+  <ion-navbar color="secondary">
+    <ion-title>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <button  ion-button icon-only  (click) ='navigateToOtherPage()' clear>
+        <img class="img-Temperature2" width="95" height="60" src="../assets/imgs/alert2.gif" alt="logo" >    
+      </button>
+    </ion-title>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Click Here
+  </ion-navbar>
+  
+</ion-header>
+-->
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title >
+      Prism
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="notiPage()">
+        <ion-icon name="alert"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="bg">
+  <div>
+    <ion-card>
+      <ion-slides pager="true" autoplay="400" loop="true" speed="3000">
+        <ion-slide>
+          <img src="assets/imgs/lora1.jpg" />
+        </ion-slide>
+        <ion-slide>
+          <img src="assets/imgs/lora2.jpg" />
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+  </div>
+
+
+  <div class="pos">
+    <div class="circle">
+      <img class="center" src="../assets/imgs/prism.png">
+    </div>
+
+    <div>
+      <h3>Prism</h3>
+    </div>
+
+    <div>
+      <h2>Predictive / Preventive System in Maintenance Management</h2>
+    </div>
+
+    <div>
+      <h1>
+        The main objectives of PRISM is to make prediction of abnormal condition at any hardware connected with the
+        sensors in order to prevent from spending huge amount of money for the maintenance cost and to alert the person
+        in charge to take action according to the level of the alert that come out on the interface.
+      </h1>
+    </div>
+  </div>
+
+  <!--
+  <div>
+    <ion-card>
+      <ion-slides autoplay="1900" loop="true" speed="2100">
+        <ion-slide *ngFor="let image of ImageArray">
+          <img src="{{image.image}}" style="height:150; width:890" /></ion-slide>
+      </ion-slides>
+
+    </ion-card>
+  </div>
+  -->
+
+  <!--
+  <div style="padding-bottom:20px;">
+    <div class="margin">
+    </div>
+    <br>
+
+
+    <img class="img-Temperature2" width="340" height="160" src="../assets/imgs/logo.jpg" alt="logo"> <br>
+
+
+
+
+
+
+  </div>
+  -->
+</ion-content>

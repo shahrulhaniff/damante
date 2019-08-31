@@ -1,0 +1,116 @@
+page-notification {
+  .bg {
+    background: url("../assets/imgs/bg.png") no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .border {
+    border-radius: 10px !important;
+    
+  }
+  
+  /*h6 {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #10425a;
+    font-family: "Nunito", Times, serif;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #10425a;
+    font-family: "Nunito", Times, serif;
+  }
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: #10425a;
+    font-family: "Nunito", Times, serif;
+  }
+  */
+
+  .moderate {
+    background-color: #ffff00;
+  }
+
+  .heavy {
+    background-color: #ffa500;
+  }
+
+  .critical {
+    background-color: #ff0000;
+  }
+
+  .bold {
+    font-weight: bold;
+    
+  }
+
+  .bold2 {
+    font-weight: bold;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+  }
+
+  .bold3 {
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Nunito", Times, serif;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .te {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    color: #10425a;
+    font-family: "Nunito", Times, serif;
+  }
+
+  .right{
+      text-align: right
+  }
+
+
+  .white{
+    color: #ffffff;
+  }
+
+  .small{
+    font-size: 13px;
+    font-family: "Nunito", Times, serif;
+  }
+
+  .xsmall{
+    font-size: 10px;
+    font-family: "Nunito", Times, serif;
+  }
+
+  .center{
+    left: auto !important;
+    right: auto !important;
+  }
+
+  .center1{
+    text-align: center
+  }
+
+  .float{
+    position: absolute;
+    bottom: 55px;
+    text-align: center;
+    border-radius: 10px;
+  }
+}

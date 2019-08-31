@@ -1,0 +1,7 @@
+{
+  "name": "tempmonitoring",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

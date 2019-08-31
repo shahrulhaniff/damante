@@ -1,0 +1,67 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title class="center">
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="bg">
+
+
+
+  <!-- 
+    <ion-card color="secondary"><h1>Contact Info</h1></ion-card>
+    <div class="margin">
+    </div>
+      
+          <img class="img-Temperature2"  width="340" height="160" src="../assets/imgs/globe.png" alt="logo" > <br>
+   -->
+
+  <div>
+    <div class="pos">
+      <img class="center" src="../assets/imgs/logo.png">
+    </div>
+    <br>
+
+    <ion-card>
+      <div style="padding-top:20px;">
+        <ion-icon name="home" item-start>
+          Lot 3-2, Jalan Kajang Perdana 3,
+          Kajang Perdana,
+          Kajang
+          Selangor
+          43000
+          Malaysia. </ion-icon>
+      </div>
+      <p><br>
+
+
+
+        <ion-icon name="mail" item-start> zulhariz@damante.com.my</ion-icon>
+        <p><br>
+
+
+
+          <ion-icon name="call" item-start> +603-87349075</ion-icon>
+          <p><br>
+
+
+
+
+            <ion-icon name="printer" item-start>
+              <ion-img style="width: 10px; height: 10px;" src="../assets/imgs/fax.png"></ion-img> +603-87349076
+            </ion-icon>
+
+    </ion-card>
+
+    <ion-card>
+      <ion-img style="width: 100%; height: 220px;" src="../assets/imgs/maps.PNG"></ion-img>
+    </ion-card>
+    <ion-card #map id=""></ion-card><br>
+
+    <button ion-button  block color="light" (click)="logout()">Logout</button>
+   </div>
+</ion-content>
