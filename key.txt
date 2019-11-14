@@ -4,7 +4,7 @@ tempmonitoring
 
 [2] ionic cordova build --release android
 
-[3]pastu paste apk realese kat luar
+[3]pastu paste apk release kat luar
 
 [4] jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore damante-release-key.keystore app-release-unsigned.apk releaseNewKey
 pass: 040471

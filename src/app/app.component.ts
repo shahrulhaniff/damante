@@ -20,7 +20,8 @@ export class MyApp {
   constructor(platform: Platform,
               statusBar: StatusBar, 
               splashScreen: SplashScreen,
-              public alertCtrl: AlertController
+              public alertCtrl: AlertController,
+              private push: Push
               ){
                 platform.ready().then(() => {
                   statusBar.styleDefault();
@@ -30,19 +31,37 @@ export class MyApp {
                 });
               }
 
-
+              
 
 pushSetup(){
   const options: PushOptions = {
     android: {
-      senderID: '1012486531089'
+      senderID: '1012486531089',
+      icon: 'alert_icon',
+      iconColor: "red",
+      forceShow: true,
+      topics: ["group_1", "public"]
     },
     ios: {
         alert: 'true',
         badge: true,
         sound: 'false'
     }
- }
+ };
+
+ const pushObject: PushObject = this.push.init(options);
+
+ pushObject.on('notification').subscribe((notification: any) => {
+  if (notification.additionalData.foreground) {
+    let youralert = this.alertCtrl.create({
+      title: 'Alert Notification',
+      message: notification.message,
+    });
+    youralert.present();
+  }
+});
+pushObject.on('registration').subscribe((registration: any) => console.log('Device registered', registration));
+pushObject.on('error').subscribe(error => console.error('Error with Push plugin', error));
 }
 }
 

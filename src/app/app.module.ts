@@ -15,6 +15,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import {NgxPaginationModule} from 'ngx-pagination';
 //import { Push, PushObject, PushOptions } from '@ionic-native/push';
 import { HttpModule } from '@angular/http';
+import { Push } from '@ionic-native/push';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { HttpModule } from '@angular/http';
     StatusBar,
     SplashScreen,
     Geolocation,
+    Push,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
