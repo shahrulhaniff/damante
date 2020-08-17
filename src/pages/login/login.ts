@@ -126,7 +126,7 @@ export class LoginPage {
   load() : void
   {
      this.http
-     .get('http://www.vems.my/iot/login.php')
+     .get('http://myprism.my/iot/login.php')
      .subscribe((data : any) =>
      {
         console.dir(data);

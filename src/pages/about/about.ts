@@ -2,6 +2,20 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, App, AlertController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Location1Page } from '../location1/location1';
+import { Location2Page } from '../location2/location2';
+import { Location3Page } from '../location3/location3';
+import { Location4Page } from '../location4/location4';
+import { Location5Page } from '../location5/location5';
+import { Location6Page } from '../location6/location6';
+import { Location7Page } from '../location7/location7';
+import { Location8Page } from '../location8/location8';
+import { Location9Page } from '../location9/location9';
+import { Location10Page } from '../location10/location10';
+import { Location11Page } from '../location11/location11';
+import { Location12Page } from '../location12/location12';
+import { Location13Page } from '../location13/location13';
+import { Location14Page } from '../location14/location14';
 
 
 @Component({
@@ -40,154 +54,56 @@ export class AboutPage {
   public items2: Array<any> = [];
 
   constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public app: App, public alertCtrl: AlertController, public http: HttpClient, public navParams: NavParams) {
-
-    this.initializeLocation();
-    this.initializeSensornum();
   }
-  ionViewWillEnter(): void {
-    this.load();
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AboutPage');
-    this.setChild;
-    
-  }
-
-
-  load(): void {
-    if (this.a == 1) {
-    
-       this.http
-       .get('http://www.vems.my/iot/retrievedata.php')
-       .subscribe((data : any) =>
-       {
-          console.dir(data);
-          this.items2 = data;
-       
-         
-  
-         },
  
-         
-       (error : any) =>
-       {
-          console.dir(error);
-       });
-      }
-    if (this.a == 1) {
-      this.http
-        .get('http://www.vems.my/iot/display.php')
-        .subscribe((data: any) => {
-          console.dir(data);
-          this.items1 = data;
-
-
-
-        },
-
-
-          (error: any) => {
-            console.dir(error);
-          });
-    }
-
-    else if (this.a == 2) {
-      this.http
-        .get('http://www.vems.my/iot/diff.php')
-        .subscribe((data: any) => {
-          console.dir(data);
-          this.items1 = data;
-
-
-
-        },
-
-
-          (error: any) => {
-            console.dir(error);
-          });
-
-    }
+  go1(): void {
+    this.navCtrl.push(Location1Page);
   }
 
-
-  
-
-  //onChange(setSensornumValue(sLocation)){
-  //console.log(setSensornumValue(sLocation).target.value);}
-  initializeLocation() {
-    this.location = [
-      { id: 0, name: 'None' },
-      { id: 1, name: 'LRT Ampang Station' },
-      { id: 2, name: 'LRT Cahaya Station' },
-      { id: 3, name: 'LRT Cempaka Station' },
-      { id: 4, name: 'LRT Pandan Indah Station' },
-      { id: 5, name: 'LRT Pandan Jaya Station' },
-      { id: 6, name: 'LRT Maluri Station' },
-      { id: 7, name: 'LRT Miharja Station' },
-
-
-    ];
+  go2(): void {
+    this.navCtrl.push(Location2Page);
+  }
+  go3(): void {
+    this.navCtrl.push(Location3Page);
+  }
+  go4(): void {
+    this.navCtrl.push(Location4Page);
   }
 
-
-  initializeSensornum() {
-    this.sensornum = [
-      { id: 1, name: '1', location_id: 1, location_name: 'LRT Ampang Station' },
-      { id: 1, name: '2', location_id: 1, location_name: 'LRT Ampang Station' },
-      { id: 2, name: '15', location_id: 2, location_name: 'LRT Cahaya Station' },
-      { id: 3, name: '15', location_id: 3, location_name: 'LRT Cempaka Station' },
-      { id: 4, name: '10', location_id: 4, location_name: 'LRT Pandan Indah Station' },
-      { id: 5, name: '5', location_id: 5, location_name: 'LRT Pandan Jaya Station' },
-      { id: 6, name: '1', location_id: 6, location_name: 'LRT Maluri Station' },
-      { id: 7, name: '3', location_id: 7, location_name: 'LRT Miharja Station' },
-    ];
+  go5(): void {
+    this.navCtrl.push(Location5Page);
+  }
+  go6(): void {
+    this.navCtrl.push(Location6Page);
+  }
+  go7(): void {
+    this.navCtrl.push(Location7Page);
   }
 
-
-  //location_id;
-  setSensornumValue(sLocation) {
-    this.selectedSensornum = this.sensornum.filter(sensornum =>
-      sensornum.location_id == sLocation.id)
-    console.log(this.sLocation.name)
-    this.location_id = this.sLocation.id
+  go8(): void {
+    this.navCtrl.push(Location8Page);
+  }
+  go9(): void {
+    this.navCtrl.push(Location9Page);
+  }
+  go10(): void {
+    this.navCtrl.push(Location10Page);
   }
 
-  /*setSensornumValue(sLocation) {
-    this.selectedSensornum = this.sensornum.filter(sensornum =>
-      sensornum.location_id == sLocation.id)
-    console.log(this.sLocation.name)
-  }*/
-
-  setChild() {
-    this.a = this.sSensornum.name;
-    this.b = this.sLocation.name;
-    //this.ionViewDidLoad();
-    this.ionViewWillEnter();
-    console.log(this.a);
-    console.log(this.b)
-
+  go11(): void {
+    this.navCtrl.push(Location11Page);
+  }
+  go12(): void {
+    this.navCtrl.push(Location12Page);
+  }
+  go13(): void {
+    this.navCtrl.push(Location13Page);
   }
 
-  onLED(): void {
-    let headers: any = new HttpHeaders({ 'Content-Type': 'application/json' }),
-      options: any = { "key": "update" },
-      url: any = "http://www.vems.my/iot/updateLEDstatus.php";
-
-    this.http.post(url, JSON.stringify(options), headers)
-
+  go14(): void {
+    this.navCtrl.push(Location14Page);
   }
 
-
-  @ViewChild('myInput') myInput: ElementRef;
-  resize() {
-    var element = this.myInput['_elementRef'].nativeElement.getElementsByClassName("text-input")[0];
-    var scrollHeight = element.scrollHeight;
-    element.style.height = scrollHeight + 'px';
-    this.myInput['_elementRef'].nativeElement.style.height = (scrollHeight + 16) + 'px';
-
-  }
 
   logout() {
     let alert = this.alertCtrl.create({

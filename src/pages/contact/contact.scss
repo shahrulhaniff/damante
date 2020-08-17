@@ -1,6 +1,6 @@
 page-contact {
   .bg {
-    background: url("../assets/imgs/bg.png") no-repeat center center fixed;
+    background: url("../assets/imgs/bg1.jpg") no-repeat center center fixed;
     background-repeat: no-repeat;
     background-size: cover;
     display: block;
@@ -11,7 +11,14 @@ page-contact {
     text-align: center;
   }
   ion-card {
-    border-radius: 20px !important;
+    border-radius: 10px !important;
+    
+  }
+  ion-card-header {
+    border-radius: 15px !important;
+  }
+  .card-fixed {
+    height: 20%;
   }
   div.margin {
     margin-top: 1cm;
@@ -22,18 +29,44 @@ page-contact {
     height: 40%;
   }
   h6 {
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    color: #10425a;
-    font-family: "Georgia", Times, serif;
-  }
-  h1 {
     font-size: 10px;
     font-weight: bold;
     text-align: center;
     color: #10425a;
-    font-family: "Times New Roman", Times, serif;
+    
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #10425a;
+  
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color:  #0c724b;
+   
+  }
+  h1 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color:  #1f4e3d;
+   
+    padding-left: 22px;
+    padding-right: 22px;
+    text-align: justify;
+  }
+  h4 {
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #10425a;
+
   }
   .pos{
     top: -10px;
@@ -56,6 +89,11 @@ page-contact {
     //background-color:rgb(255, 255, 255);
   }
 
+  .absolute{
+    position: absolute;
+ 
+  
+}
 
 
 }

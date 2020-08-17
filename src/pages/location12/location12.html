@@ -1,0 +1,112 @@
+<!--
+  Generated template for the Location1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar color= "cust">
+    <ion-title >KL Monorail Maharajalela Station</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-item color="dark" no-lines>
+    <p class="center">Devices</p>
+  </ion-item>
+  <div padding>
+    <div class="center">
+      <ion-chip>
+        <ion-label>Select device here to check for sensors data</ion-label>
+      </ion-chip>
+    </div>
+  </div>
+  <br>
+  <ion-col>
+  <button ion-button class="block" block color="light" (click)="equip201()">Device 201  <br>Asset : Escalator</button>
+  </ion-col><br>
+  <button ion-button class="block" block color="light" (click)="equip202()">Device 202  <br>Asset : Escalator</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip203()">Device 203  <br>Asset : Escalator</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip204()">Device 204  <br>Asset : Escalator</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip205()">Device 205  <br>Asset : Escalator</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip206()">Device 206 <br>Asset : Escalator</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip207()">Device 207  <br>Asset : Escalator</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip208()">Device 208  <br>Asset : Escalator</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip209()">Device 209  <br>Asset : Escalator</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip210()">Device 210  <br>Asset : Escalator</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip211()">Device 211  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip212()">Device 212  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip213()">Device 213  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip214()">Device 214  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip215()">Device 215  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip216()">Device 216  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip217()">Device 217  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip218()">Device 218  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip219()">Device 219  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip220()">Device 220  <br>Asset : Lift</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip221()">Device 221  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip222()">Device 222  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip223()">Device 223  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip224()">Device 224  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip225()">Device 225  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip226()">Device 226  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip227()">Device 227  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip228()">Device 228  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip229()">Device 229  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip230()">Device 230  <br>Asset : Passenger Information Display</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip231()">Device 231  <br>Asset : Main Door</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip232()">Device 232  <br>Asset : Main Door</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip233()">Device 233  <br>Asset : Main Door</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip234()">Device 234  <br>Asset : Main Door</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip235()">Device 235  <br>Asset : Main Door</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip236()">Device 236  <br>Asset : Main Door</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip237()">Device 237  <br>Asset : Main Door</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip238()">Device 238  <br>Asset : Main Door</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip239()">Device 239  <br>Asset : Main Door</button>
+  <br>
+  <button ion-button  class="block" block color="light" (click)="equip240()">Device 240  <br>Asset : Main Door</button>
+  <br><br>

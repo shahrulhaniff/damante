@@ -39,7 +39,7 @@ $colors: (
   danger:     #6989a7,
   light:      #ffffff,
   dark:       rgb(0, 0, 0),
-  cust :      #336e47
+  cust :      #3c5c99
 );
 
 
@@ -87,3 +87,5 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+//@import url('https://fonts.googleapis.com/css?family=Archivo&display=swap');

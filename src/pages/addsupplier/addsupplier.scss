@@ -1,0 +1,105 @@
+page-addsupplier {
+    .bg {
+        background: url("../assets/imgs/bg1.jpg") no-repeat center center fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      .border {
+        border-radius: 10px !important;
+        
+      }
+      .bold {
+        font-weight: bold;
+        
+      }
+    
+      .bold2 {
+        font-weight: bold;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        
+      }
+    
+      .bold3 {
+        font-weight: bold;
+        font-size: 15px;
+        font-family: "Nunito", Times, serif;
+      }
+    
+      .left {
+        text-align: left;
+      }
+    
+      .te {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: left;
+        color: #10425a;
+        font-family: "Nunito", Times, serif;
+      }
+    
+      .right{
+          text-align: right
+      }
+    
+    
+      .white{
+        color: #ffffff;
+      }
+    
+      .small{
+        font-size: 13px;
+        font-family: "Nunito", Times, serif;
+      }
+    
+      .xsmall{
+        font-size: 10px;
+        font-family: "Nunito", Times, serif;
+      }
+    
+      .center{
+        left: auto !important;
+        right: auto !important;
+      }
+    
+      .center1{
+        text-align: center
+      }
+    
+      .float{
+        position: absolute;
+        bottom: 55px;
+        text-align: center;
+        border-radius: 10px;
+      }
+      ion-button {
+        border-radius: 0px !important;
+        height: 300px;
+      }
+
+      h1 {
+        font-size:20px;
+        font-weight:thin;
+        text-align:start;
+        color:rgb(13, 99, 99);
+        font-family: "Nunito", Times, serif; 
+    margin-left: 1cm;
+    }
+    #rounded {
+        width: 330px;
+        height: 30px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 10px;
+        margin-bottom: 8px;  
+        margin-left: 0.5cm;
+        margin-right: 0.5cm;
+        text-align:justify;
+    }
+
+}
+ 

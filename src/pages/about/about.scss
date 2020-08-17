@@ -2,7 +2,7 @@ page-about {
     
     .bg{
  
-        background: url("../assets/imgs/bg.png") no-repeat center center fixed;
+        background: url("../assets/imgs/bg1.jpg") no-repeat center center fixed;
         background-repeat: no-repeat;
          background-size: cover;
          display: block;
@@ -18,7 +18,9 @@ page-about {
     
        
     }
-
+.ion-col {
+    text-align:center;
+}
     .ion-card2 {
         border-radius:20px !important;
         }
@@ -73,6 +75,14 @@ page-about {
 
         .rounded{
             border-radius: 10px;
+        }
+
+        .round {
+            width: 290px;
+            height: 40px;
+            border-radius: 15px;
+        text-align: centre;
+        margin-left:45px;
         }
 
         .div.alert-head{

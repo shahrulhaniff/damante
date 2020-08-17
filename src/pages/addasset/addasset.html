@@ -1,0 +1,58 @@
+<ion-header no-border>
+  <ion-navbar transparent>
+    <ion-title class="center1">Add Asset</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg" padding>
+<h1>Add New Equipments:</h1>
+<br>
+
+<ion-item id="rounded" >
+  <ion-label class="bold3">Equipment Name:</ion-label>
+  <ion-input type="text" required [(ngModel)]="equipmentname" name="equipmentname"></ion-input>
+</ion-item>
+
+<ion-item id="rounded" >
+  <ion-label class="bold3">Equipment ID:</ion-label>
+  <ion-input type="text" required [(ngModel)]="equipmentid" name="equipmentid"></ion-input>
+</ion-item>
+
+<ion-item id="rounded" >
+  <ion-label class="bold3">Brand:</ion-label>
+  <ion-input type="text" required [(ngModel)]="brand" name="brand"></ion-input>
+</ion-item>
+
+<ion-item id="rounded" >
+  <ion-label class="bold3">Model:</ion-label>
+  <ion-input type="text" required [(ngModel)]="model" name="model"></ion-input>
+</ion-item>
+
+<ion-item id="rounded" no-lines>
+  <ion-label>Supplier: </ion-label>
+  <ion-select [(ngModel)]="sSupplier">
+    <ion-option [value] ="d">dfrobot</ion-option>
+    <ion-option [value] ="D">D'amante (M) Sdn Bhd</ion-option>
+  </ion-select>
+</ion-item>
+<ion-item id="rounded" >
+  <ion-label class="bold3">Sensor ID:</ion-label>
+  <ion-input type="text" required [(ngModel)]="sensor_ID" name="sensor_ID"></ion-input>
+</ion-item>
+<ion-item id="rounded" no-lines>
+  <ion-label>Location: </ion-label>
+  <ion-select [(ngModel)]="sLocation">
+    <ion-option [value] ="A">LRT Ampang Station</ion-option>
+    <ion-option [value] ="B">LRT Cahaya Station</ion-option>
+    <ion-option [value] ="B">LRT Cempaka Station</ion-option>
+    <ion-option [value] ="B">LRT Pandan Indah Station</ion-option>
+    <ion-option [value] ="B">LRT Pandan Jaya Station</ion-option>
+    <ion-option [value] ="B">LRT Maluri Station</ion-option>
+    <ion-option [value] ="B">LRT Miharja Station</ion-option>
+  </ion-select>
+</ion-item>
+<br>
+<!-- [disabled]="!isisemua" -->
+  <button ion-button round color="danger" (click)="addAsset2()" > Submit</button>
+<br>
+</ion-content>

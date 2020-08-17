@@ -1,105 +1,135 @@
-<!--<ion-header >
-  <ion-navbar color="secondary">
-    <ion-title>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      
-      <button  ion-button icon-only  (click) ='navigateToOtherPage()' clear>
-        <img class="img-Temperature2" width="95" height="60" src="../assets/imgs/alert2.gif" alt="logo" >    
-      </button>
-    </ion-title>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Click Here
-  </ion-navbar>
-  
-</ion-header>
--->
 <ion-header no-border>
-  <ion-navbar transparent>
-    <ion-title >
-      Prism
-    </ion-title>
+ <br>
 
-    <ion-buttons end>
+    <!-- <ion-buttons end>
       <button ion-button icon-only (click)="notiPage()">
         <ion-icon name="alert"></ion-icon>
       </button>
-    </ion-buttons>
-  </ion-navbar>
+    </ion-buttons> -->
+  
 </ion-header>
 
 
-<ion-content class="bg">
-  <div>
-    <ion-card>
-      <ion-slides pager="true" autoplay="400" loop="true" speed="3000">
-        <ion-slide>
-          <img src="assets/imgs/lora1.jpg" />
-        </ion-slide>
-        <ion-slide>
-          <img src="assets/imgs/lora2.jpg" />
-        </ion-slide>
-      </ion-slides>
-    </ion-card>
-  </div>
+<ion-content class="bg" padding>
+
 
 
   <div class="pos">
-    <div class="circle">
-      <img class="center" src="../assets/imgs/prism.png">
+    <div >
+      <img class="center" width = 280px height=150px src="../assets/imgs/logo.jpg">
     </div>
+    <br>
+    <br>
+  
+    
+      <ion-title class="center1">
+        Device Alert Notification
+      </ion-title>
+     
 
-    <div>
-      <h3>Prism</h3>
-    </div>
+    <!-- <ion-card color="tertiary" class="border">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </ion-card> -->
 
-    <div>
-      <h2>Predictive / Preventive System in Maintenance Management</h2>
-    </div>
+    <ion-card *ngFor="let item of items | paginate: { itemsPerPage: 10, currentPage: p }" class="border" padding>
 
-    <div>
-      <h1>
-        The main objectives of PRISM is to make prediction of abnormal condition at any hardware connected with the
-        sensors in order to prevent from spending huge amount of money for the maintenance cost and to alert the person
-        in charge to take action according to the level of the alert that come out on the interface.
-      </h1>
-    </div>
-  </div>
 
-  <!--
-  <div>
-    <ion-card>
-      <ion-slides autoplay="1900" loop="true" speed="2100">
-        <ion-slide *ngFor="let image of ImageArray">
-          <img src="{{image.image}}" style="height:150; width:890" /></ion-slide>
-      </ion-slides>
+
+      <div *ngIf="item.type == 'Heavy'">
+        <div class="te">
+          <ion-row>
+            <ion-col col-5>
+              <p class="bold3">{{item.location_name}} (No.{{item.No}})</p>
+              <p class="xsmall">Sensor:{{item.read_type}}</p>
+              <p class="xsmall">Asset:{{item.e_name}}</p>
+            </ion-col>
+            <ion-col class="right">
+              <ion-chip class="heavy">
+                <ion-label>
+                  Heavy
+                </ion-label>
+              </ion-chip>
+              <p>
+                {{(item.dateTime)?.substring(8,10)}}/{{(item.dateTime)?.substring(5,7)}}/{{(item.dateTime)?.substring(0,4)}}
+              </p>
+              <p class="xxsmall">Sensor ID :{{item.sensor_ID}}</p>          
+              <p class="xxsmall">Reading Value :{{item.read_val}}</p>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div>
+          <h2 class="bold3">Description :</h2>
+          <p>
+            {{item.message}}
+          </p>
+        </div>
+      </div>
+
+      <div *ngIf="item.type == 'Moderate'">
+        <div class="te">
+          <ion-row>
+            <ion-col col-5>
+              <p class="bold3">{{item.location_name}} (No.{{item.No}})</p>
+              <p class="xsmall">Sensor:{{item.read_type}}</p>
+              <p class="xsmall">Asset:{{item.e_name}}</p>
+            </ion-col>
+            <ion-col class="right">
+              <ion-chip class="moderate">
+                <ion-label>
+                  Moderate
+                </ion-label>
+              </ion-chip>
+              <p>
+                {{(item.dateTime)?.substring(8,10)}}/{{(item.dateTime)?.substring(5,7)}}/{{(item.dateTime)?.substring(0,4)}}
+              </p>
+              <p class="xxsmall">Sensor ID :{{item.sensor_ID}}</p>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div>
+          <h2 class="bold3">Description :</h2>
+          <p>
+            {{item.message}}
+          </p>
+        </div>
+      </div>
+
+      <div *ngIf="item.type == 'Critical'">
+        <div class="te">
+          <ion-row>
+            <ion-col col-5>
+              <p class="bold3">{{item.location_name}} (No.{{item.No}})</p>
+              <p class="xsmall">Sensor:{{item.read_type}}</p>
+              <p class="xsmall">Asset:{{item.e_name}}</p>
+            </ion-col>
+            <ion-col class="right">
+              <ion-chip class="critical">
+                <ion-label>
+                  Critical
+                </ion-label>
+              </ion-chip>
+              <p>
+                {{(item.dateTime)?.substring(8,10)}}/{{(item.dateTime)?.substring(5,7)}}/{{(item.dateTime)?.substring(0,4)}}
+              </p>
+              <p class="xxsmall">Sensor ID :{{item.sensor_ID}}</p>
+            </ion-col>
+          </ion-row>
+        </div>
+        <div>
+          <h2 class="bold3">Description :</h2>
+          <p>
+            {{item.message}}
+          </p>
+        </div>
+      </div>
+
 
     </ion-card>
   </div>
-  -->
 
-  <!--
-  <div style="padding-bottom:20px;">
-    <div class="margin">
-    </div>
     <br>
-
-
-    <img class="img-Temperature2" width="340" height="160" src="../assets/imgs/logo.jpg" alt="logo"> <br>
-
-
-
-
-
-
-  </div>
-  -->
+    <br>
 </ion-content>
+<ion-card color="tertiary" class="float">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</ion-card>

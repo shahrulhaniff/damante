@@ -67,7 +67,7 @@ b: any;
   load() : void
   {
     this.http
-    .get('http://www.vems.my/iot/retrievealert.php')
+    .get('http://myprism.my/iot/retrievealert.php')
     .subscribe((data : any) =>
     {
        console.dir(data);

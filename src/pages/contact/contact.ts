@@ -1,7 +1,7 @@
 import { Component, ViewChild ,ElementRef  } from '@angular/core';
 import { NavController, LoadingController, App, AlertController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { Geolocation, GeolocationOptions, Geoposition, PositionError } from '@ionic-native/geolocation';
+import { Geolocation, } from '@ionic-native/geolocation';
 declare var google;
 
 @Component({
@@ -10,67 +10,67 @@ declare var google;
 })
 export class ContactPage {
 
-  options: GeolocationOptions;
-  currentPos: Geoposition;
-  @ViewChild('map') mapElement: ElementRef;
-  map: any;
+  // options: GeolocationOptions;
+  // currentPos: Geoposition;
+  // @ViewChild('map') mapElement: ElementRef;
+  // map: any;
 
   constructor(public navCtrl: NavController,public loadingCtrl: LoadingController,public app: App, public alertCtrl: AlertController, private geolocation: Geolocation) {
 
   }
 
   ionViewDidEnter() {
-    this.getUserPosition();
+    //this.getUserPosition();
   }
-  getUserPosition() {
-    this.options = {
-      enableHighAccuracy : false
-      };
-      this.geolocation.getCurrentPosition(this.options).then((pos : Geoposition) => {
+//   getUserPosition() {
+//     this.options = {
+//       enableHighAccuracy : false
+//       };
+//       this.geolocation.getCurrentPosition(this.options).then((pos : Geoposition) => {
   
-          this.currentPos = pos;     
+//           this.currentPos = pos;     
   
-          console.log(pos);
-          this.addMap(2.993932,101.816241);
+//           console.log(pos);
+//           this.addMap(2.993932,101.816241);
   
-      },(err : PositionError)=>{
-          console.log("error : " + err.message);
-      ;
-      })
-  }
+//       },(err : PositionError)=>{
+//           console.log("error : " + err.message);
+//       ;
+//       })
+//   }
    
-  addMap(lat,long){
+//   addMap(lat,long){
 
-    let latLng = new google.maps.LatLng(lat, long);
+//     let latLng = new google.maps.LatLng(lat, long);
 
-    let mapOptions = {
-    center: latLng,
-    zoom: 15,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
+//     let mapOptions = {
+//     center: latLng,
+//     zoom: 15,
+//     mapTypeId: google.maps.MapTypeId.ROADMAP
+//     }
 
-    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-    this.addMarker();
-}
+//     this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
+//     this.addMarker();
+// }
 
-addMarker(){
+// addMarker(){
 
-  let marker = new google.maps.Marker({
-  map: this.map,
-  animation: google.maps.Animation.DROP,
-  position: this.map.getCenter()
-  });
+//   let marker = new google.maps.Marker({
+//   map: this.map,
+//   animation: google.maps.Animation.DROP,
+//   position: this.map.getCenter()
+//   });
 
-  let content = "<p>D'amante(M) Sdn.Bhd</p>";          
-  let infoWindow = new google.maps.InfoWindow({
-  content: content
-  });
+//   let content = "<p>D'amante(M) Sdn.Bhd</p>";          
+//   let infoWindow = new google.maps.InfoWindow({
+//   content: content
+//   });
 
-  google.maps.event.addListener(marker, 'click', () => {
-  infoWindow.open(this.map, marker);
-  });
+//   google.maps.event.addListener(marker, 'click', () => {
+//   infoWindow.open(this.map, marker);
+//   });
 
-}
+// }
 
 
 logout() {

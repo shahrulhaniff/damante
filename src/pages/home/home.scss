@@ -4,13 +4,96 @@ page-home {
   }*/
   .bg{
  
-    background: url("../assets/imgs/bg.png") no-repeat center center fixed;
+    background: url("../assets/imgs/bg1.jpg") no-repeat center center fixed;
     background-repeat: no-repeat;
      background-size: cover;
      display: block;
      margin-left: auto;
      margin-right: auto
   }
+  .border {
+    border-radius: 10px !important;
+    
+  }
+
+  
+  .moderate {
+    background-color: #ffff00;
+  }
+
+  .heavy {
+    background-color: #ffa500;
+  }
+
+  .critical {
+    background-color: #ff0000;
+  }
+
+  .bold {
+    font-weight: bold;
+    
+  }
+
+  .bold2 {
+    font-weight: bold;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+  }
+
+  .bold3 {
+    font-weight: bold;
+    font-size: 14px;
+  
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .te {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    color: #10425a;
+    
+  }
+
+  .right{
+      text-align: right
+  }
+
+
+  .white{
+    color: #ffffff;
+  }
+
+  .small{
+    font-size: 13px;
+    
+  }
+
+  .xsmall{
+    font-size: 10px;
+  }
+
+  .center{
+    left: auto !important;
+    right: auto !important;
+  }
+
+  .center1{
+    text-align: center
+  }
+
+  .float{
+    position: absolute;
+    bottom: 55px;
+    text-align: center;
+    border-radius: 10px;
+  }
+}
+
 
   div {
     text-align: center;
@@ -41,7 +124,7 @@ page-home {
     font-weight: bold;
     text-align: justify;
     color: #0b0c0c;
-    font-family: "Georgia", Times, serif;
+    
   }
 
   h2 {
@@ -49,7 +132,7 @@ page-home {
     font-weight: bold;
     text-align: center;
     color: #10425a;
-    font-family: "Nunito", Times, serif;
+    
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -59,14 +142,14 @@ page-home {
     font-weight: bold;
     text-align: center;
     color:  #0c724b;
-    font-family: "Nunito", Times, serif;
+  
   }
   h1 {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     color:  #1f4e3d;
-    font-family: "Nunito", Times, serif;
+   
     padding-left: 22px;
     padding-right: 22px;
     text-align: justify;
@@ -77,8 +160,8 @@ page-home {
   }
 
   .circle {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     margin-left: auto;
@@ -99,4 +182,4 @@ page-home {
       
   }
   
-}
+
