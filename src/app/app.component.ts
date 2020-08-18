@@ -9,6 +9,8 @@ import { AlertController } from "ionic-angular";
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { NotificationPage } from '../pages/notification/notification';
+import { AboutPage } from '../pages/about/about';
+import { HomePage } from '../pages/home/home';
 //private push: Push,public http:Http,
 
 @Component({
@@ -37,10 +39,10 @@ export class MyApp {
 
   checkPreviousAuthorization(): void {
     if ((window.localStorage.getItem('email') === "undefined" || window.localStorage.getItem('email') === null)) {
-      this.rootPage = LoginPage;
+      this.rootPage = TabsPage;//LoginPage;
     } else {
 
-      this.rootPage = LoginPage;
+      this.rootPage = TabsPage;
 
     }
   }

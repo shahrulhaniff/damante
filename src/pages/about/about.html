@@ -6,8 +6,6 @@
   </ion-navbar>
 </ion-header>
 
-
-
 <ion-content class="bg">
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
@@ -24,9 +22,50 @@
       </ion-chip>
     </div>
 <br>
-<ion-col>
-<button ion-button  class="round" block color="light" (click)="go1()">LRT Ampang Station</button>
-</ion-col><br>
+  
+  <ion-item id="rounded">
+    <ion-label>Location: </ion-label>
+    <ion-select value="Please Choose.." okText="Select" cancelText="Cancel" (ionChange)="setDeviceValue(location_id)" [(ngModel)]="location_id">
+      <div *ngFor="let loc of fetch_location"><ion-option value="{{loc.id}}">{{loc.location_name}}</ion-option></div>
+    </ion-select>
+  </ion-item>
+
+<ion-item id="rounded" *ngIf="selectedDevice">
+  <ion-label>Devices: </ion-label>
+  <ion-select value="Please Choose.." okText="Select" cancelText="Cancel" (ionChange)="setData(device_id)" [(ngModel)]="device_id"> <!--(ionChange)="setType_Value(device_id)"-->
+    <div *ngFor="let dev of selectedDevice"><ion-option value="{{dev.sensor_ID}}">{{dev.sensor_ID}} </ion-option></div>
+  </ion-select>
+</ion-item>
+
+<ion-item id="rounded" *ngIf="selectedDevice">
+  <ion-label>Start Date and Time</ion-label>
+  <ion-datetime displayFormat="YYYY-MM-DD HH:mm" [(ngModel)]="startDateTime"></ion-datetime>
+</ion-item>
+
+<ion-item id="rounded" *ngIf="selectedDevice">
+  <ion-label>End Date and Time</ion-label>
+  <ion-datetime displayFormat="YYYY-MM-DD HH:mm" [(ngModel)]="endDateTime"></ion-datetime>
+</ion-item>
+<!--
+<form [formGroup]="form" ionChange="onChange($event)">
+<ion-item-group>
+  <ion-item-divider color="light">Location</ion-item-divider>
+  <ion-item>
+    <ion-select formControlName="location" value="Please Choose.." okText="Select" cancelText="Cancel">
+      <div *ngFor="let loc of fetch_location"><ion-option value="{{loc.id}}">{{loc.location_name}}</ion-option></div>
+    </ion-select>
+  </ion-item>
+</ion-item-group>
+</form> -->
+<!--
+<div *ngFor="let button of buttons">
+ <div (click)="go({record: button})">
+    <button ion-button  class="round" block color="light">{{button.location_name}}</button>
+ </div>
+</div> -->
+
+<!--
+<br>
 <button ion-button  class="round" block color="light" (click)="go2()">LRT Cahaya Station</button>
 <br>
 <button ion-button  class="round" block color="light" (click)="go3()">LRT Cempaka Station</button>
@@ -52,4 +91,8 @@
 <button ion-button  class="round" block color="light" (click)="go13()">MRT Stadium Kajang Station</button>
 <br>
 <button ion-button  class="round" block color="light" (click)="go14()">MRT Maluri Station</button>
-<br><br>
+<br><br>-->
+
+<div *ngFor="let data of fetch_data">
+  <h2>X : {{data.X}}  Y: {{data.Y}}  Z : {{data.Z}}</h2><br>
+</div>
